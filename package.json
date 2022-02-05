@@ -12,13 +12,13 @@
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/parser": "^5.10.2",
     "bootstrap": "^5.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
-    "typescript": "^4.5.4",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
@@ -27,11 +27,39 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "@eslint/eslintrc": {
+    "version": "0.4.3",
+    "resolved": "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.4.3.tgz",
+    "integrity": "sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==",
+    "dev": true,
+    "requires": {
+      "ajv": "^6.12.4",
+      "debug": "^4.1.1",
+      "espree": "^7.3.0",
+      "globals": "^13.9.0",
+      "ignore": "^4.0.6",
+      "import-fresh": "^3.2.1",
+      "js-yaml": "^3.13.1",
+      "minimatch": "^3.0.4",
+      "strip-json-comments": "^3.1.1"
+    },
+    "dependencies": {
+      "globals": {
+        "version": "13.11.0",
+        "resolved": "https://registry.npmjs.org/globals/-/globals-13.11.0.tgz",
+        "integrity": "sha512-08/xrJ7wQjK9kkkRoI3OFUBbLx4f+6x3SGwcPvQ0QH6goFDrOU2oyAWrmh3dJezu65buo+HBMzAMQy6rovVC3g==",
+        "dev": true,
+        "requires": {
+          "type-fest": "^0.20.2"
+        }
+      },
+      "ignore": {
+        "version": "4.0.6",
+        "resolved": "https://registry.npmjs.org/ignore/-/ignore-4.0.6.tgz",
+        "integrity": "sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==",
+        "dev": true
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -46,6 +74,42 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.20"
+    "@nvt/eslint-config-cs": "7.0.0-dev.5",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/node-logger": "^6.3.7",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.7",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/file-saver": "^2.0.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.13",
+    "@types/react": "^16.14.6",
+    "@types/react-dom": "^16.9.13",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.20",
+    "dotenv": "^8.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "http-proxy-middleware": "^2.0.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "nock": "^13.2.1",
+    "react-scripts": "^4.0.3",
+    "storybook-addon-mock": "^2.0.1",
+    "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,tsx}": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix"
+    ]
   }
 }
